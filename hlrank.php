@@ -15,7 +15,7 @@ foreach ($url_split_data as &$line)
     // Extract and display the Hero League Rank.
 	
     $rank = array();
-    preg_match("/<td class=\"rgMasterTable\">(\d+\.\d+)/", $line, $rank);
+    preg_match("/<tr class=\"rgAltRow\">(\d+\.\d+)/", $line, $rank);
     echo "Hero League Rank: ".$rank[1];
   }
 }
