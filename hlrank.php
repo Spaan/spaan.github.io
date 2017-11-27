@@ -12,9 +12,9 @@ foreach ($url_split_data as &$line)
   // Find HL Rank
   if (preg_match("/title=\"Hero League\"/", $line))
   {
-    // Extract and display the win percent.
+    // Extract and display the Hero League Rank.
 	
-    $matches = array();
+    $rank = array();
     preg_match("/<td class=\"rgSorted\">(\d+\.\d+)/", $line, $rank);
     echo "Hero League Rank: ".$rank[1];
   }
